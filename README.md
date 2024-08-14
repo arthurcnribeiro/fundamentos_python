@@ -1,7 +1,8 @@
-# Fundamentos Python
-Formação Python Fundamentals
+<h1 align="center">Fundamentos Python</h1>
+<b>Formação Python Fundamentals</b>
 
-Atividades:
+
+<h3>Atividades:</h3>
 Desafio de Código: Coloque em prática todo o conhecimento adquirido nas aulas e teste o seu conhecimento na resolução de um desafio.
 
 Desafio de Projeto: Construa o seu portfólio construindo projetos práticos com o conhecimento adquirido ao longo das aulas.
