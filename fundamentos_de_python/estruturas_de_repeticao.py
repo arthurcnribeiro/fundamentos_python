@@ -23,7 +23,16 @@ while opcao != 0:
     if opcao == 10:
         break
     print(opcao)"""
-for numero in range(101):
+#********************************
+"""for numero in range(101):
     if numero % 2 == 1:
         continue
-    print(numero, end=" ")
+    print(numero, end=" ")"""
+#********************************
+"""carros = ["Gol", "Celta", "Palio", "BMW"]
+for carro in carros:
+    print(carro)"""
+carros = ["Gol", "Celta", "Palio", "BMW"]
+for indice, carro in enumerate(carros): #indice é o contador
+    print(f"{indice+1} : {carro}")
+
