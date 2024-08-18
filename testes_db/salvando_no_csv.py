@@ -1,10 +1,20 @@
-import pandas as pd
+import csv
 
-# Especificando o caminho para o arquivo CSV
-tabela_1 = "db/tabela_1.csv"# Lendo o arquivo CSV
-dados = pd.read_csv(tabela_1, delimiter=";") #ler toda a tabela e mostrando o delimitador
-print(dados)
+# Solicita os dados do usuário
+nome = input("Digite seu nome: ")
+idade = input("Digite sua idade: ")
 
-#linhas_filtradas = dados[dados['fabricante'] == 'Honda']
-#print(linhas_filtradas)
-#linhas_filtradas.to_csv("db/tabela2.csv", index=False)
+# Nome do arquivo CSV
+nome_arquivo = "db/tabela_2.csv"
+
+# Abre o arquivo em modo de escrita (write mode)
+with open(nome_arquivo, mode='w', newline='') as arquivo:
+    escritor_csv = csv.writer(arquivo)
+
+    # Escreve o cabeçalho (opcional)
+    escritor_csv.writerow(["Nome", "Idade"])
+
+    # Escreve os dados do usuário
+    escritor_csv.writerow([nome, idade])
+
+print(f"Dados salvos no arquivo {nome_arquivo}.")

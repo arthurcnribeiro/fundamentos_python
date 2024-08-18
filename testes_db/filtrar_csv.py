@@ -11,7 +11,7 @@ dados = pd.read_csv(tabela_1, delimiter=';') #ler toda a tabela
 #print(colunas_especificas)
 #*************************************************************
 #***************************************************************
-linhas_filtradas = dados[dados['quilometragem'] >= 100000]
+linhas_filtradas = dados[dados['quilometragem'] <= 3000]
 print(linhas_filtradas)
 
 #print()
