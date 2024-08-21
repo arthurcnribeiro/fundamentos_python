@@ -19,13 +19,13 @@ print(matriz[0][-1]) #primeira linha e última coluna
 print(matriz[-1][-1]) # última linha e última coluna
 print(matriz[1][1]) # segunda linha (1) e segunda coluna (1)"""
 #******************************************************************
-"""lista = ["p", "y", "t", "h", "o", "n"]
+lista = ["p", "y", "t", "h", "o", "n"]
 print(lista[2:])
 print(lista[:2])
 print(lista[1:3])
 print(lista[0:3:2])
 print(lista[::])
-print(lista[::-1])"""
+print(lista[::-1])
 #*****************************************************************
 """carros = ["Gol", "Celta", "Palio", "BMW"]
 for carro in carros:
@@ -65,7 +65,7 @@ print(lista)
 lista.clear()
 print(lista)
 print(lista2)"""
-lista = [1, 2, 3, 1, 4, 1, 5, 6]
+"""lista = [1, 2, 3, 1, 4, 1, 5, 6]
 print(lista)
 lista[7] = 1 #alterando o promeiro item da lista, item ZERO 0
 print(lista)
@@ -83,7 +83,7 @@ print(lista)
 lista.sort()
 print(lista)
 lista.sort(reverse=True)
-print(lista)
+print(lista)"""
 
 
 
