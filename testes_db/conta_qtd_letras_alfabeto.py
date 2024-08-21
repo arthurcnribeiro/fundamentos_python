@@ -1,23 +1,23 @@
-def contar_letras(arquivo):
-    alfabeto = 'abcdefghijklmnopqrstuvwxyz'
-    contagem = {letra: 0 for letra in alfabeto}  # Inicializa o dicionário com contagem 0 para cada letra
+def substituir_vogais(arquivo_entrada, arquivo_saida):
+    vogais = 'aeiouAEIOU'  # Define as vogais, tanto maiúsculas quanto minúsculas
 
     try:
-        with open(arquivo, 'r') as file:
-            conteudo = file.read().lower()  # Lê o conteúdo e converte tudo para minúsculas
+        with open(arquivo_entrada, 'r') as entrada:
+            conteudo = entrada.read()  # Lê o conteúdo do arquivo de entrada
 
-            for caractere in conteudo:
-                if caractere in contagem:  # Verifica se o caractere é uma letra do alfabeto
-                    contagem[caractere] += 1  # Incrementa a contagem da letra correspondente
+            # Substitui cada vogal por '*'
+            conteudo_substituido = ''.join('*' if caractere in vogais else caractere for caractere in conteudo)
 
-        # Exibe a contagem de cada letra
-        for letra, qtd in contagem.items():
-            print(f"A letra '{letra}' aparece {qtd} vezes.")
+        with open(arquivo_saida, 'w') as saida:
+            saida.write(conteudo_substituido)  # Escreve o conteúdo modificado no arquivo de saída
+
+        print(f"O arquivo '{arquivo_saida}' foi criado com as vogais substituídas por '*'.")
 
     except FileNotFoundError:
-        print("Arquivo não encontrado. Por favor, verifique o nome e tente novamente.")
+        print("Arquivo de entrada não encontrado. Por favor, verifique o nome e tente novamente.")
 
 
-# Solicita o nome do arquivo ao usuário
-arquivo_usuario = input("Digite o nome do arquivo (com a extensão): ")
-contar_letras(arquivo_usuario)
+# Solicita o nome do arquivo de entrada e o nome do arquivo de saída ao usuário
+arquivo_entrada = input("Digite o nome do arquivo de entrada (com a extensão): ")
+arquivo_saida = input("Digite o nome do arquivo de saída (com a extensão): ")
+substituir_vogais(arquivo_entrada, arquivo_saida)
